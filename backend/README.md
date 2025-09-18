@@ -51,9 +51,10 @@ graph TD
 
 ## Setup
 
-1. Create `.env` file in the project root:
-   ```
-   MISTRAL_API_KEY=your_mistral_api_key_here
+1. Create `.env` file in the backend directory (copy from `.env.example`):
+   ```bash
+   cp .env.example .env
+   # Then edit .env and add your actual Mistral API key
    ```
 
 2. Install dependencies:
@@ -63,6 +64,7 @@ graph TD
 
 3. Start the server:
    ```bash
+   cd backend
    PYTHONPATH=. python3 -m uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
    ```
 
